@@ -1,0 +1,12 @@
+import { Injectable } from '@nestjs/common';
+
+@Injectable()
+export class BillingService {
+  getHello(): string {
+    return 'Hello World!';
+  }
+
+  public async bill(data: any) {
+    console.log({ data });
+  }
+}

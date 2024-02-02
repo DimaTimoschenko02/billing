@@ -3,6 +3,7 @@ import { BillingController } from './billing.controller';
 import { BillingService } from './billing.service';
 import { RmqModule } from '@app/common/rmq/rmq.module';
 import { ConfigModule } from '@nestjs/config';
+import { SearchModule } from './elasticsearch/elasticsearch.module';
 
 @Module({
   imports: [
@@ -10,6 +11,7 @@ import { ConfigModule } from '@nestjs/config';
       isGlobal: true,
     }),
     RmqModule,
+    SearchModule,
   ],
   controllers: [BillingController],
   providers: [BillingService],
